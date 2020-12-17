@@ -39,7 +39,7 @@ namespace Api.Controllers
         [Route("v1/ShowMeCode")]
         public async Task<IActionResult> Get()
         {
-            return await Response("");
+            return await Response("https://github.com/carlostpereira/Softplan-Test");
         }
 
         //O Ideal seria isso estar em outra classe de serviço, mas, preferi para este exemplo deixar aqui mesmo.

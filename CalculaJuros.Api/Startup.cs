@@ -40,7 +40,7 @@ namespace CalculaJuros.Api
             {
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "Teste Challenge",
+                    Title = "Teste Softplan",
                     Description = "API de rotinas e consultas",
                 });
 
