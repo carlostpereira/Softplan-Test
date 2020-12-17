@@ -1,4 +1,3 @@
-using App.Domain.Repositories;
 using App.Infrastructure.Repositories;
 using Xunit;
 

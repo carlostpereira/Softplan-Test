@@ -42,7 +42,7 @@ namespace Api.Controllers
             return await Response("https://github.com/carlostpereira/Softplan-Test");
         }
 
-        //O Ideal seria isso estar em outra classe de serviço, mas, preferi para este exemplo deixar aqui mesmo.
+        //O Ideal seria isso estar em um projeto de serviço, mas, preferi para este exemplo deixar aqui mesmo.
         public async Task<TaxaJuro> ObtemTaxaJuros()
         {
             var action = $"{ApiManager.GetKey("urlapi")}v1/TaxaJuros/";
