@@ -26,6 +26,9 @@ namespace Api.Controllers
         {
             var taxaJuros = ObtemTaxaJuros().Result;
 
+            if (taxaJuros == null)
+                return await Response("Não foi possível acessar a API Taxa de cálculo, a operação foi cancelada.");
+
             command.Juros = taxaJuros.ValorTaxaJuros;
 
             var data = _handler.Handle(command);
