@@ -10,7 +10,7 @@ namespace Api.Controllers
         {
         }
 
-        public new async Task<IActionResult> Response(object result)
+        public async Task<IActionResult> Response(object result)
         {
             try
             {
