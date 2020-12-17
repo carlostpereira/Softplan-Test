@@ -41,7 +41,7 @@ namespace TaxaJuros.Api
             {
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "Teste Softplan",
+                    Title = "API Softplan - Taxa de Juros",
                     Description = "API de rotinas e consultas",
                 });
 
