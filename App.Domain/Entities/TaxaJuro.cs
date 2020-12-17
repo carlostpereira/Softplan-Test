@@ -6,10 +6,9 @@
         {
         }
 
-        public TaxaJuro(double valorTaxaJuros = 1)
+        public TaxaJuro(double valorTaxaJuros)
         {
-            valorTaxaJuros = (valorTaxaJuros <= 0 ? 1 : valorTaxaJuros);
-            this.ValorTaxaJuros = (valorTaxaJuros /100);
+            this.ValorTaxaJuros = valorTaxaJuros;
         }
 
         public double ValorTaxaJuros { get; set; }

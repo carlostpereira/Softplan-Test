@@ -8,18 +8,12 @@ namespace App.Domain.Entities
         {
         }
 
-        public CalculaJuro(double valorInicial, double juros, int meses)
+        public CalculaJuro(double valorJurosComposto)
         {
-            this.ValorJurosComposto = CalcularJurosCompostos(valorInicial, juros, meses);
+            this.ValorJurosComposto = valorJurosComposto;
         }
 
         public double ValorJurosComposto { get; private set; }
 
-        private double CalcularJurosCompostos(double valorInicial, double juros, int meses)
-        {
-            double result = valorInicial * Math.Pow((1 + juros), meses);
-            result = Math.Truncate(100 * result) / 100;
-            return result;
-        }
     }
 }

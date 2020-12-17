@@ -1,20 +1,25 @@
 ﻿using App.Domain.Commands.Inputs;
 using App.Domain.Commands.Results;
 using App.Domain.Entities;
+using App.Domain.Repositories;
 using App.Shared.Commands;
 
 namespace App.Domain.Commands.Handlers
 {
-    public class TaxaJurosCommandHandler : ICommandHandler<TaxaJurosCommand>
+    public class TaxaJurosCommandHandler
     {
-        public TaxaJurosCommandHandler()
+        private readonly ITaxaJurosRepository _repository;
+        public TaxaJurosCommandHandler(ITaxaJurosRepository repository)
         {
+            _repository = repository;
         }
 
 
-        public ICommandResult Handle(TaxaJurosCommand command)
+        public ICommandResult Handle()
         {
-            var commandObject = new TaxaJuro(command.BaseCalculo);
+            var taxaJuros = _repository.ObterTaxaJuros();
+            var commandObject = new TaxaJuro(taxaJuros);
+
             return new TaxaJurosCommandResult(commandObject.ValorTaxaJuros);
 
         }

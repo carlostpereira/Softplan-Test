@@ -17,9 +17,9 @@ namespace Api.Controllers
 
         [HttpGet]
         [Route("v1/TaxaJuros")]
-        public async Task<IActionResult> Get(TaxaJurosCommand command)
+        public async Task<IActionResult> Get()
         {
-            var data = _handler.Handle(command);
+            var data = _handler.Handle();
             if (data != null)
                 return await Response(data);
 
